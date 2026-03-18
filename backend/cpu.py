@@ -31,7 +31,7 @@ class CPU:
             est = self.l_r(avg) - (0.25 if c.suit == self.briscola and sum(self.hand, lambda i: i.suit==self.briscola.suit) == 1 else 0) - 0.0024*(c.points()**2)
             # print('est', c, po, pr, avg, est)
             choices[c] += est
-        # print(choices)
+        print(choices)
         choice = max(choices, key=lambda i: choices[i])
         # print('cc', choice)
         self.hand.remove(choice)
